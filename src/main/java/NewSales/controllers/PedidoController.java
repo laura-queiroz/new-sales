@@ -7,6 +7,7 @@ import NewSales.entities.Pedido;
 import NewSales.enums.StatusPedido;
 import NewSales.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -21,6 +22,7 @@ import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("/pedidos")
+@Transactional
 public class PedidoController {
 
     @Autowired

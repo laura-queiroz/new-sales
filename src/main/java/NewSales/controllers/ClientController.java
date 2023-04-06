@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clients")
+@Transactional
 public class ClientController {
 
     @Autowired
